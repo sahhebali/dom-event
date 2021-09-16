@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1>Even niye click baji</h1>
+    <input id="name-filed" type="text">
+    <button id="update-name">update</button>
+    <p id="haldel-function"></p>
+
+    <button onclick="handleFunctionOnclick()">click </button>
+    <button id="handle-direct">click hare</button>
+
+    <script>
+        function handleFunctionOnclick() {
+            const p = document.getElementById('haldel-function');
+            console.log(p);
+            p.innerText = 'set using by function';
+        }
+
+
+        document.getElementById('handle-direct').addEventListener('click', function () {
+            const p = document.getElementById('haldel-function');
+            p.innerText = 'set by direct eventlisener';
+        })
+
+        document.getElementById('update-name').addEventListener('click', function () {
+            const nameFiled = document.getElementById('name-filed');
+            const p = document.getElementById('haldel-function');
+            p.innerText = nameFiled.value;
+        })
+    </script>
+</body>
+
+</html>

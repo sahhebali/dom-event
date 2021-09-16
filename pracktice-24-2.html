@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Event niye click baji</h1>
+    <button onclick="document.body.style.backgroundColor='yellow'">click yellow</button>
+    <button onclick="makeRed()">click red</button>
+    <button id="make blue">click blue button</button>
+    <script>
+        function makeRed() {
+            document.body.style.backgroundColor = 'red';
+        }
+
+
+        const bulebutton = document.getElementById('make blue');
+        bulebutton.onclick = makeBlue;
+        function makeBlue() {
+            document.body.style.backgroundColor = 'blue';
+        }
+    </script>
+</body>
+
+</html>
